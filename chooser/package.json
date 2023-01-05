@@ -1,0 +1,54 @@
+{
+  "name": "@creativecommons/chooser",
+  "version": "0.2.0",
+  "description": "The new and improved Creative Commons License Chooser",
+  "author": {
+    "name": "Creative Commons",
+    "url": "https://creativecommons.org"
+  },
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/creativecommons/chooser.git"
+  },
+  "license": "MIT",
+  "main": "dist/license-chooser.min.js",
+  "browser": "dist/license-chooser.min.js",
+  "module": "dist/license-chooser.min.js",
+  "unpkg": "dist/license-chooser.min.js",
+  "files": [
+    "dist/*.{js,map}",
+    "dist/img/*.svg"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test:e2e": "start-server-and-test preview :4173 'cypress run --e2e'",
+    "test:e2e:dev": "start-server-and-test 'vite dev --port 4173' :4173 'cypress open --e2e'",
+    "test:unit": "cypress run --component",
+    "test:unit:dev": "cypress open --component",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
+  },
+  "dependencies": {
+    "@creativecommons/vocabulary-components": "^0.3.0",
+    "clipboard": "^2.0.11",
+    "sass": "^1.57.1",
+    "vue": "^3.2.45",
+    "vue-i18n": "^9.2.2",
+    "vue-scrollto": "^2.20.0",
+    "vuex": "^4.1.0"
+  },
+  "devDependencies": {
+    "@rushstack/eslint-patch": "^1.1.4",
+    "@vitejs/plugin-vue": "^4.0.0",
+    "@vue/eslint-config-prettier": "^7.0.0",
+    "cypress": "^12.0.2",
+    "eslint": "^8.22.0",
+    "eslint-plugin-cypress": "^2.12.1",
+    "eslint-plugin-vue": "^9.3.0",
+    "prettier": "^2.7.1",
+    "start-server-and-test": "^1.15.2",
+    "vite": "^4.0.0"
+  }
+}
