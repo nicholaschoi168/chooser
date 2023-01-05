@@ -14,7 +14,7 @@
 </template>
 <script>
 import { mapGetters } from 'vuex';
-import VSelect from '@/Vocabulary/VSelect';
+import VSelect from '@/Vocabulary/VSelect.vue';
 export default {
   name: 'DropdownStep',
   components: { VSelect },

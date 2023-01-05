@@ -53,7 +53,7 @@
 </template>
 <script>
 import { mapMutations, mapState } from 'vuex';
-import VInput from '@/Vocabulary/VInput';
+import VInput from '@/Vocabulary/VInput.vue';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import { faInfoCircle } from '@fortawesome/free-solid-svg-icons';
 import { library } from '@fortawesome/fontawesome-svg-core';

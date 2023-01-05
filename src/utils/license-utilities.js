@@ -1,4 +1,4 @@
-/** @typedef {{BY?: boolean, NC?: boolean, ND?: boolean, SA?: boolean}} LicenseAttributes */
+git /** @typedef {{BY?: boolean, NC?: boolean, ND?: boolean, SA?: boolean}} LicenseAttributes */
 
 /** @typedef {('CC0 1.0'|'CC BY 4.0'|'CC BY-SA 4.0'|'CC BY-NC 4.0'|'CC BY-ND 4.0'|'CC BY-NC-ND 4.0'|'CC BY-NC-SA 4.0')} ShortLicenseName
  */

@@ -123,7 +123,7 @@
 </template>
 
 <script>
-import LicenseIcons from './LicenseIcons';
+import LicenseIcons from './LicenseIcons.vue';
 
 export default {
   name: 'ChooserModal',

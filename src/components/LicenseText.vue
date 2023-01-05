@@ -57,7 +57,7 @@
 </template>
 <script>
 import { mapGetters, mapState } from 'vuex';
-import LicenseIcons from './LicenseIcons';
+import LicenseIcons from './LicenseIcons.vue';
 
 export default {
   name: 'LicenseText',

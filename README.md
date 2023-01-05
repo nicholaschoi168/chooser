@@ -1,96 +1,57 @@
-![GitHub contributors](https://img.shields.io/github/contributors/creativecommons/chooser)
-![GitHub Sponsors](https://img.shields.io/github/sponsors/creativecommons)
-![GitHub](https://img.shields.io/github/license/creativecommons/chooser)
-![npm](https://img.shields.io/npm/v/@creativecommons/chooser)
-![Libraries.io dependency status for latest release, scoped npm package](https://img.shields.io/librariesio/release/npm/@creativecommons/chooser)
-![npm](https://img.shields.io/npm/dm/@creativecommons/chooser)
-![GitHub issues](https://img.shields.io/github/issues-raw/creativecommons/chooser)
-![GitHub Repo stars](https://img.shields.io/github/stars/creativecommons/chooser?style=social)
-![GitHub forks](https://img.shields.io/github/forks/creativecommons/chooser?style=social)
+# chooser
 
-# Chooser
+This template should help get you started developing with Vue 3 in Vite.
 
-The Creative Commons License Chooser is meant to help people learn about CC licenses, and select the license that best fits their needs. The new version in this repo places greater importance on usability, and an educational experience of the six CC licenses.
+## Recommended IDE Setup
 
-## About
+[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
 
-Repository containing the source code for the new Creative Commons License Chooser. The new chooser is still in beta, and a beta deployment can be found [here](https://chooser-beta.creativecommons.org/).
+## Customize configuration
 
-This site is built using [Vue.js](https://vuejs.org/) (and vue-cli).
+See [Vite Configuration Reference](https://vitejs.dev/config/).
 
-### Roadmap
+## Project Setup
 
-Tasks, issues, and discussion related to the release of the new chooser are tracked with the [`Launch Milestone`](https://github.com/creativecommons/chooser/milestone/1).
-
-## Getting Started
-
-Run the following commands in order to have the code up and running on your machine:
-
-``` bash
-# install dependencies
+```sh
 npm install
 ```
 
-```bash
-# Build and serve assets with hot-reload
-npm run serve
+### Compile and Hot-Reload for Development
+
+```sh
+npm run dev
 ```
 
-You should now have the application running and accessible at <http://localhost:8080> (note: will run on a different port if 8080 is occupied, most common alternative port is 8081).
+### Compile and Minify for Production
 
-## Building as web component
-
-To build the project as a web component, run the command `npm run build-component`. This will create a file in the `dist` folder named `license-chooser.min.js`. It can be used to load the web-component in any JS project. There is also a sample `demo.html` created.
-
-To be able to use the file it should either be rendered statically from the integrater's web-app or be published on a CDN. Following code can be used to integrate this in other apps.
-
-Note: the Chooser component depends on Vue 2.x, as can be seen in the following example.
-
-```
-<script src="https://cdn.jsdelivr.net/npm/vue@2.x.x"></script>
-<script src="https://unpkg.com/@creativecommons/chooser/dist/license-chooser.js"></script>
-
-<license-chooser></license-chooser>
+```sh
+npm run build
 ```
 
-If the web component is intended to be built without header and footer, run `VUE_APP_CC_OUTPUT=embedded npm run build-component`
+### Run Headed Component Tests with [Cypress Component Testing](https://on.cypress.io/component)
 
-## Contributing
-
-For information on contributing, please see [Creative Commons' Contribution Guidelines](https://opensource.creativecommons.org/contributing-code/)
-
-If you create a PR for your work, but you are not finished yet, please include `WIP:` in the beginning of your PR title. When your work on your PR is completed, and you are ready for a final review, please remove the `WIP:` prefix from the title to indicate that your work is done.
-
-Here's a [handy link](https://github.com/creativecommons/chooser/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc+label%3A%22help+wanted%22+-label%3A%22in+progress%22) that will show you all open issues in this repo that have the `help wanted` tag, but do not have the `in progress` tag.
-All issues in this list are up for grabs!
-If it says "No results matched your search", then there are no issues currently up for grabs.
-
-*If no progress has been made on an issue for seven days after assignment, the assignment will be removed to allow others to contribute.*
-
-## Running Tests
-
-You can run tests by executing:
-
-```bash
-npm run test
+```sh
+npm run test:unit:dev # or `npm run test:unit` for headless testing
 ```
-For running tests on a web-component build, run `npm run test-component`. It starts a server with the  `dist/demo.html` on which tests can be run.
 
+### Run End-to-End Tests with [Cypress](https://www.cypress.io/)
 
-## CSS Build
+```sh
+npm run test:e2e:dev
+```
 
-The Chooser uses PostCSS plugin for PurgeCSS to make CSS bundle size smaller. It automatically removes unused CSS based on the classes found in the final built bundle. Some styles for dynamic components or dynamically-imported files can also be removed. If you find that the built site misses some styles, you can manually add the necessary classes or Regex expressions to the `safelist` array in the `postcss.config.js` file.
+This runs the end-to-end tests against the Vite development server.
+It is much faster than the production build.
 
-## Deployment
+But it's still recommended to test the production build with `test:e2e` before deploying (e.g. in CI environments):
 
-The chooser is deployed to GitHub Pages. The source files for the beta deployment are contained in the `./docs/` dir, and are live. Any changes to this directory's contents will be automatically deployed, so please take care when making modifications to this location.
+```sh
+npm run build
+npm run test:e2e
+```
 
-To update the dist bundle, run ```$ npm run build```. This will also automatically copy the generated files from `./dist/` to `./docs/`.
+### Lint with [ESLint](https://eslint.org/)
 
-## Output Modes
-
-The site can be built in two different modes: `embedded` and `standalone`. `Embedded` mode removes the header and footer from the application, resulting in the following appearance:
-
-<img src="static/embedded-screenshot.png" alt="Application built in embedded mode">
-
-To build into embedded mode, set the environment variable `VUE_APP_CC_OUTPUT=embedded` on your server before building. If `VUE_APP_CC_OUTPUT` is unset or set to a different value, the app will build in the default `standalone` mode, with its own header and footer.
+```sh
+npm run lint
+```

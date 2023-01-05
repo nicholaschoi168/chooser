@@ -60,7 +60,7 @@
   </div>
 </template>
 <script>
-import LicenseIcons from './LicenseIcons';
+import LicenseIcons from './LicenseIcons.vue';
 import { LICENSES, licenseSlug } from '../utils/license-utilities';
 import { mapGetters } from 'vuex';
 import { library } from '@fortawesome/fontawesome-svg-core';

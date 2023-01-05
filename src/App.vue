@@ -51,13 +51,13 @@
 // TODO Reduce custom styling in favour of Vocabulary styles
 import { mapMutations } from 'vuex';
 
-import ChooserModal from './components/ChooserModal';
-import HelpSection from './components/HelpSection';
-import Stepper from './components/Stepper';
-import HeaderSection from './components/HeaderSection';
-import FooterSection from './components/FooterSection';
-import LicenseDetailsCard from './components/LicenseDetailsCard';
-import i18n from './i18n';
+import ChooserModal from './components/ChooserModal.vue';
+import HelpSection from './components/HelpSection.vue';
+import Stepper from './components/Stepper.vue';
+import HeaderSection from './components/HeaderSection.vue';
+import FooterSection from './components/FooterSection.vue';
+import LicenseDetailsCard from './components/LicenseDetailsCard.vue';
+//import i18n from './i18n';
 import createStore from './store';
 const store = createStore({});
 
@@ -69,7 +69,7 @@ export default {
     HelpSection,
     Stepper,
     LicenseDetailsCard,
-    LicenseUseCard: () => import('@/components/LicenseUseCard'),
+    LicenseUseCard: () => import('@/components/LicenseUseCard.vue'),
     HeaderSection,
     FooterSection,
     ChooserModal,
@@ -173,7 +173,7 @@ export default {
 };
 </script>
 <style lang="scss">
-@import '~@creativecommons/vocabulary-styles';
+@import '@creativecommons/vocabulary-styles/dist/css/vocabulary-styles.css';
 
 #app {
   -webkit-font-smoothing: antialiased;

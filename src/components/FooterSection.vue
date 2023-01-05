@@ -133,7 +133,7 @@
 </template>
 
 <script>
-import LicenseIcons from './LicenseIcons';
+import LicenseIcons from './LicenseIcons.vue';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faTwitter, faFacebookF, faLinkedinIn, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faCircle } from '@fortawesome/free-solid-svg-icons';

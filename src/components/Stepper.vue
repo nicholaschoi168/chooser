@@ -32,15 +32,15 @@
 </template>
 
 <script>
-import ChooserStep from './ChooserStep';
-import AttributionDetailsStep from './AttributionDetailsStep';
-import CopyrightWaiverStep from './CopyrightWaiverStep';
-import DropdownStep from './DropdownStep';
-import StepHeader from './StepHeader';
-import StepNavigation from './StepNavigation';
+import ChooserStep from './ChooserStep.vue';
+import AttributionDetailsStep from './AttributionDetailsStep.vue';
+import CopyrightWaiverStep from './CopyrightWaiverStep.vue';
+import DropdownStep from './DropdownStep.vue';
+import StepHeader from './StepHeader.vue';
+import StepNavigation from './StepNavigation.vue';
 import { updateVisibleEnabledStatus } from '@/utils/license-utilities';
 import { initialSteps } from '@/utils/steps';
-import AppropriateLicenseStep from './AppropriateLicenseStep';
+import AppropriateLicenseStep from './AppropriateLicenseStep.vue';
 
 export default {
   name: 'Stepper',

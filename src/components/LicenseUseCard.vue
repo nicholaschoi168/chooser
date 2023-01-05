@@ -38,9 +38,9 @@
   </div>
 </template>
 <script>
-import CopyTools from '@/components/CopyTools';
-import LicenseHTML from '@/components/LicenseHTML';
-import LicenseText from '@/components/LicenseText';
+import CopyTools from '@/components/CopyTools.vue';
+import LicenseHTML from '@/components/LicenseHTML.vue';
+import LicenseText from '@/components/LicenseText.vue';
 export default {
   name: 'LicenseUseCard',
   components: {

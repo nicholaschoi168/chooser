@@ -17,9 +17,9 @@
 </template>
 
 <script>
-import CopyTypeSwitch from '@/components/CopyTypeSwitch';
+import CopyTypeSwitch from '@/components/CopyTypeSwitch.vue';
 import Clipboard from 'clipboard';
-import XmpButton from '@/components/XmpButton';
+import XmpButton from '@/components/XmpButton.vue';
 
 export default {
   name: 'CopyTools',
