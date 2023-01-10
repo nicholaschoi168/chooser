@@ -20,7 +20,7 @@
 
       <div class="columns wider-gap">
         <div class="column">
-          <Stepper v-model="currentStepId" @restart="restart" @done="done" />
+          <TheStepper v-model="currentStepId" @restart="restart" @done="done" />
           <help-section @change="openChooserModal" />
         </div>
         <div class="column right-column">
@@ -53,7 +53,7 @@ import { mapMutations } from 'vuex';
 
 import ChooserModal from './components/ChooserModal';
 import HelpSection from './components/HelpSection';
-import Stepper from './components/Stepper';
+import TheStepper from './components/TheStepper';
 import HeaderSection from './components/HeaderSection';
 import FooterSection from './components/FooterSection';
 import LicenseDetailsCard from './components/LicenseDetailsCard';
@@ -67,7 +67,7 @@ export default {
   i18n,
   components: {
     HelpSection,
-    Stepper,
+    TheStepper,
     LicenseDetailsCard,
     LicenseUseCard: () => import('@/components/LicenseUseCard'),
     HeaderSection,

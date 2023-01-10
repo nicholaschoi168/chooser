@@ -43,7 +43,7 @@ import { initialSteps } from '@/utils/steps';
 import AppropriateLicenseStep from './AppropriateLicenseStep';
 
 export default {
-  name: 'Stepper',
+  name: 'TheStepper',
   components: {
     ChooserStep,
     AttributionDetailsStep,
